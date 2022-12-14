@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "951520711618",
+    "project_id": "whitescreenapp",
+    "storage_bucket": "whitescreenapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951520711618:android:d1a0fc58528ebb4cf43c5b",
+        "android_client_info": {
+          "package_name": "com.loaiza.software.whitescreenapp.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "951520711618-2ncbjc8mmsudpfi351lgh5gsle05r3cn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMSPFadotb1O6WEbRksLZ_KDECBgHLkq4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "951520711618-2ncbjc8mmsudpfi351lgh5gsle05r3cn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

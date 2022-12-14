@@ -18,6 +18,21 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    flavorDimensions "environment"
+    productFlavors {
+        prod {
+            dimension "environment"
+            //applicationIdSuffix ".prod"
+            buildConfigField("String", "ENVIRONMENT", "\"prod\"")
+        }
+        dev {
+            dimension "environment"
+            applicationIdSuffix ".dev"
+            buildConfigField("String", "ENVIRONMENT", "\"dev\"")
+        }
+    }
+
+
     buildTypes {
         release {
             minifyEnabled false
