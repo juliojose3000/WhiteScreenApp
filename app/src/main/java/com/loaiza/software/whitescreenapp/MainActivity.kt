@@ -4,6 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
+/**
+ * Created by Julio Segura
+ */
 class MainActivity : AppCompatActivity() {
 
     private lateinit var inAppUpdate: InAppUpdate
