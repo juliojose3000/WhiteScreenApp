@@ -3,6 +3,7 @@ package com.loaiza.software.whitescreenapp
 import android.app.Activity
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.play.core.appupdate.AppUpdateManager
@@ -13,18 +14,19 @@ import com.google.android.play.core.install.model.InstallStatus
 import com.google.android.play.core.install.model.UpdateAvailability
 import com.google.android.play.core.ktx.isFlexibleUpdateAllowed
 import com.google.android.play.core.ktx.isImmediateUpdateAllowed
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.remoteconfig.FirebaseRemoteConfig
+import com.google.firebase.remoteconfig.ktx.remoteConfig
 
-class MyAppUpdateManager(private val activity: Activity) {
+class MyAppUpdateManager(private val activity: Activity, private val updateType: Int) {
 
     var appUpdateManager: AppUpdateManager = AppUpdateManagerFactory.create(activity)
-
-    private val updateType = AppUpdateType.FLEXIBLE
 
     private val installStateUpdatedListener = InstallStateUpdatedListener { state ->
         if(state.installStatus() == InstallStatus.DOWNLOADED) {
             Toast.makeText(
                 activity,
-                "Download successful. Restarting app in 5 seconds.",
+                "Download successful. Restarting app in 5 seconds...",
                 Toast.LENGTH_LONG)
                 .show()
 
@@ -32,7 +34,7 @@ class MyAppUpdateManager(private val activity: Activity) {
                 {
                     appUpdateManager.completeUpdate()
                 },
-                5000 // value in milliseconds
+                3000 // value in milliseconds
             )
 
         }
@@ -45,6 +47,8 @@ class MyAppUpdateManager(private val activity: Activity) {
         }
 
         checkForAppUpdates()
+
+        Log.v("MainActivity", "update type is -> $updateType")
 
     }
 

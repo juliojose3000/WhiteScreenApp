@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaults>
+    <entry>
+        <key>app_update_type</key>
+        <value>0</value>
+    </entry>
+</defaults>

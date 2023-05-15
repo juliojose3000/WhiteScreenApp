@@ -70,6 +70,9 @@ dependencies {
     // For Kotlin users also add the Kotlin extensions library for Play In-App Update
     implementation 'com.google.android.play:app-update-ktx:2.0.1'
 
+    // Add the dependencies for the Remote Config
+    implementation 'com.google.firebase:firebase-config-ktx'
+
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
