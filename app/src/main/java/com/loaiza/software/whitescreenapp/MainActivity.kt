@@ -25,7 +25,7 @@ import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
  */
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var updater: MyAppUpdateManager
+    private lateinit var inAppUpdate: InAppUpdate
     private val TAG = "MainActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
 
                     val updateType = remoteConfig.getLong("app_update_type").toInt()
 
-                    updater = MyAppUpdateManager(this, updateType)
+                    inAppUpdate = InAppUpdate(this, updateType)
 
                 } else {
                     Toast.makeText(
@@ -76,17 +76,17 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        if(::updater.isInitialized) updater.doOnImmediateUpdate()
+        if(::inAppUpdate.isInitialized) inAppUpdate.onResume()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        updater.checkUpdateResult(requestCode, resultCode)
+        inAppUpdate.onActivityResult(requestCode, resultCode, data)
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        updater.unRegisterListener()
+        inAppUpdate.onDestroy()
     }
 
 }
