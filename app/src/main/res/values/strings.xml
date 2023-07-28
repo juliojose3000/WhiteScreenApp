@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">White Screen App</string>
+    <string name="title_activity_second">White Screen App A2</string>
 </resources>
