@@ -22,7 +22,7 @@ import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
 
 /**
  * Created by Julio Segura
- * Modified on March 20, 2024
+ * Modified on March 20, 2024 at 4:03 pm
  * Git Tag: myTag
  */
 class MainActivity : AppCompatActivity() {
