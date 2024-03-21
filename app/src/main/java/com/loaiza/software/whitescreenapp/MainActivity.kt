@@ -24,6 +24,7 @@ import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
  * Created by Julio Segura
  * Modified on March 20, 2024 at 4:03 pm
  * Git Tag: myTag
+ * Testing with two Firebase apps (Prod/Dev)
  */
 class MainActivity : AppCompatActivity() {
 
