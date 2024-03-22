@@ -6,14 +6,23 @@ plugins {
 }
 
 android {
+
+    def getAppVersionCode = { ->
+        return 8
+    }
+
+    def getAppVersionName = { ->
+        return "1.7"
+    }
+
     compileSdk 33
 
     defaultConfig {
         applicationId "com.loaiza.software.whitescreenapp"
         minSdk 22
         targetSdk 33
-        versionCode 7
-        versionName "1.6"
+        //versionCode 7
+        //versionName "1.6"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -24,11 +33,15 @@ android {
             dimension "environment"
             //applicationIdSuffix ".prod"
             buildConfigField("String", "ENVIRONMENT", "\"prod\"")
+            versionCode getAppVersionCode()
+            versionName "prodRelease-v${getAppVersionName()}"
         }
         dev {
             dimension "environment"
             applicationIdSuffix ".dev"
             buildConfigField("String", "ENVIRONMENT", "\"dev\"")
+            versionCode getAppVersionCode()
+            versionName "devRelease-v${getAppVersionName()}"
         }
     }
 
