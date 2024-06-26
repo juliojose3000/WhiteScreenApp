@@ -18,7 +18,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.loaiza.software.whitescreenapp"
+        applicationId "com.loaiza.software.whitescreen"
         minSdk 22
         targetSdk 33
         //versionCode 7

@@ -1,4 +1,4 @@
-package com.loaiza.software.whitescreenapp
+package com.loaiza.software.whitescreen
 
 
 import android.app.Activity

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.loaiza.software.whitescreenapp">
+    package="com.loaiza.software.whitescreen">
 
     <application
         android:allowBackup="true"
@@ -13,7 +13,7 @@
 
 
         <activity
-            android:name=".SecondActivity"
+            android:name="com.loaiza.software.whitescreen.SecondActivity"
             android:exported="true"
             android:label="@string/title_activity_second">
             <tools:validation testUrl="https://cachi-fitness-center.web.app/home" />
@@ -50,7 +50,7 @@
 
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.loaiza.software.whitescreen.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
