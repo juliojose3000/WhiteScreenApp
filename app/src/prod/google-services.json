@@ -7,9 +7,38 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:951520711618:android:04fb446b48665c84f43c5b",
+        "mobilesdk_app_id": "1:951520711618:android:752b0bd1e7e827cdf43c5b",
         "android_client_info": {
-          "package_name": "com.loaiza.software.whitescreen"
+          "package_name": "com.loaiza.software.whitescreen.prod"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "951520711618-2ncbjc8mmsudpfi351lgh5gsle05r3cn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMSPFadotb1O6WEbRksLZ_KDECBgHLkq4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "951520711618-2ncbjc8mmsudpfi351lgh5gsle05r3cn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951520711618:android:752b0bd1e7e827cdf43c5b",
+        "android_client_info": {
+          "package_name": "com.loaiza.software.whitescreen.prod"
         }
       },
       "oauth_client": [
