@@ -15,12 +15,12 @@ android {
         return "1.8"
     }
 
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.loaiza.software.whitescreen"
-        minSdk 22
-        targetSdk 33
+        minSdk 24
+        targetSdk 34
         //versionCode 7
         //versionName "1.6"
 
