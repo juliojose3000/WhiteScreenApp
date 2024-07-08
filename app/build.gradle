@@ -31,7 +31,7 @@ android {
     productFlavors {
         prod {
             dimension "environment"
-            applicationIdSuffix ".prod"
+            //applicationIdSuffix ".prod"
             buildConfigField("String", "ENVIRONMENT", "\"prod\"")
             versionCode getAppVersionCode()
             versionName "prodRelease-v${getAppVersionName()}"
