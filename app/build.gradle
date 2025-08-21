@@ -8,19 +8,19 @@ plugins {
 android {
 
     def getAppVersionCode = { ->
-        return 16
+        return 17
     }
 
     def getAppVersionName = { ->
-        return "1.8"
+        return "1.9"
     }
 
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.loaiza.software.whitescreen"
         minSdk 24
-        targetSdk 34
+        targetSdk 35
         //versionCode 7
         //versionName "1.6"
 
