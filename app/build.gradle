@@ -8,7 +8,7 @@ plugins {
 android {
 
     def getAppVersionCode = { ->
-        return 17
+        return 31
     }
 
     def getAppVersionName = { ->
