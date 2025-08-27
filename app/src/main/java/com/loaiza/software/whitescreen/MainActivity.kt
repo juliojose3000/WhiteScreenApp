@@ -73,12 +73,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        inAppUpdate.onActivityResult(requestCode, resultCode, data)
+        if(::inAppUpdate.isInitialized) inAppUpdate.onActivityResult(requestCode, resultCode, data)
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        inAppUpdate.onDestroy()
+        if(::inAppUpdate.isInitialized) inAppUpdate.onDestroy()
     }
 
 }
