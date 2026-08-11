@@ -1,6 +1,7 @@
 plugins {
+    // Kotlin support is built into AGP 9+; the org.jetbrains.kotlin.android
+    // plugin is no longer applied. See https://kotl.in/gradle/agp-built-in-kotlin
     id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
     id 'com.google.firebase.crashlytics'
 }
@@ -27,7 +28,13 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    flavorDimensions "environment"
+    buildFeatures {
+        // Required from AGP 9: the android.defaults.buildfeatures.buildconfig
+        // property was removed, and buildConfigField below needs this on.
+        buildConfig true
+    }
+
+    flavorDimensions = ["environment"]
     productFlavors {
         prod {
             dimension "environment"
@@ -56,10 +63,15 @@ android {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = '11'
-    }
     namespace 'com.loaiza.software.whitescreen'
+}
+
+// AGP 9 removed the android.kotlinOptions block; JVM target is now set on the
+// built-in Kotlin plugin's compilerOptions.
+kotlin {
+    compilerOptions {
+        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11
+    }
 }
 
 dependencies {
