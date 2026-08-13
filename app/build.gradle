@@ -9,11 +9,11 @@ plugins {
 android {
 
     def getAppVersionCode = { ->
-        return 32
+        return 33
     }
 
     def getAppVersionName = { ->
-        return "1.10"
+        return "1.11"
     }
 
     compileSdk 37
